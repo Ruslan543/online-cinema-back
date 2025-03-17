@@ -9,10 +9,6 @@ import { JwtModule } from "@nestjs/jwt";
 import { getJWTConfig } from "src/config/jwt.config";
 import { JwtStrategy } from "./strategies/jwt.strategy";
 
-// TypegooseModule.forFeature([
-//   { typegooseClass: UserModel, schemaOptions: { collection: "User" } },
-// ]),
-
 @Module({
   controllers: [AuthController],
   imports: [
