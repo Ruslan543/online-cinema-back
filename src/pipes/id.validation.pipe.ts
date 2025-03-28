@@ -13,6 +13,6 @@ export class IdValidationPipe implements PipeTransform {
       throw new BadRequestException("Invalid format id");
     }
 
-    return value;
+    return new Types.ObjectId(value);
   }
 }

@@ -36,7 +36,7 @@ export class ActorService {
           {
             $match: {
               $expr: {
-                $in: [{ $toString: "$$actorId" }, "$actors"],
+                $in: ["$$actorId", "$actors"],
               },
             },
           },
