@@ -31,7 +31,9 @@ export class MovieController {
 
   @HttpCode(200)
   @Get("by-actor/:actorId")
-  async byActor(@Param("actorId", IdValidationPipe) actorId: Types.ObjectId) {
+  async byActor(
+    @Param("actorId", IdValidationPipe.toObjectId()) actorId: Types.ObjectId,
+  ) {
     return this.movieService.byActor(actorId);
   }
 
